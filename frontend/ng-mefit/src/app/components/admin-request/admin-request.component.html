@@ -1,0 +1,14 @@
+<div>
+    <div class="container-fluid mt-1">
+        <div class="row">
+            <div class="ml-4 mt-4" style="color: white;">
+                <div id="removeAdminButton" *ngIf="!isAdmin">
+                    <button class="btn btn-info float-end ms-2 d-md-inline" (click)="handleAdminRequestButton()">Become Admin</button>
+                </div>
+                <div>
+                    <button class="btn btn-info float-end ms-2 d-md-inline" (click)="handleChangePasswordButton()">Change Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

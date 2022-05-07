@@ -1,0 +1,34 @@
+<div class="row text-center mt-2 text-black">
+    <div class="col-md-2">
+        <div mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+            <img role="button" src="/assets/images/next-page-icon.png" alt="image"
+                style="height: 40px; transform: scaleX(-1);">
+
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div
+        mwlCalendarToday
+        [(viewDate)]="viewDate"
+      >
+        <img role="button" src="/assets/images/today-icon.png" alt="Today" style="height: 40px">
+      </div>
+    </div>
+    <div class="col-md-4">
+        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+    </div>
+    <div class="col-md-4">
+        <div mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+            <img role="button" src="/assets/images/next-page-icon.png" alt="Next" style="height: 40px">
+        </div>
+    </div>
+</div>
+<div class="row text-black">
+    <div class="col-md-12 mb-4">
+        <mwl-calendar-month-view [viewDate]="viewDate" [events]="events" [refresh]="refresh"
+            [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
+            (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"
+            (beforeViewRender)="beforeMonthViewRender($event)">
+        </mwl-calendar-month-view>
+    </div>
+</div>

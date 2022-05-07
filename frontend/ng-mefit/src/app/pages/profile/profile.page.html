@@ -1,0 +1,17 @@
+<div>
+    <div class="container mt-1">
+        <div class="row">
+            <div class="ml-4 mt-4" style="color: white;">
+                <div class="border border-5 border-dark rounded p-4" style="background-color: #2c3948;">
+                    <h2 class="d-inline fw-light">First Name: {{user?.firstName}}</h2><br>
+                    <h2 class="d-inline fw-light">Last Name: {{user?.lastName}}</h2><br>
+                    <h2 id="Admin" class="d-inline fw-light">Admin: {{AdminType}}</h2><br>
+                    <div *ngIf="program">
+                        <h2 class="d-inline fw-light">Goal: {{program?.name}}</h2>
+                    </div>
+                    <app-admin-request></app-admin-request>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

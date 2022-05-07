@@ -1,0 +1,12 @@
+<div class="border border-5 border-dark rounded mt-4 m-2" style="background-color: #2c3948;">
+  <h1 class="d-inline-block m-3">{{program.name}}</h1>
+  <button (click)="handleClicked()" class="btn btn-info mb-3">
+      Details
+      <span *ngIf="!showDetails">&#11208;</span>
+      <span *ngIf="showDetails">&#11206;</span>
+  </button>
+  <div class="d-inline float-end m-4">
+    <app-create-goal-button [program]="program"></app-create-goal-button>
+  </div>
+  <app-program-details [program]="program" *ngIf="showDetails"></app-program-details>
+</div>

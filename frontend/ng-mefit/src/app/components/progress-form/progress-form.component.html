@@ -1,0 +1,29 @@
+<h4 style="color: white">Progress</h4>
+<div class="table-wrapper h-100">
+    <table class="table table-light">
+        <thead class="table-header table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Complete {{totalComplete}}/{{totalWorkouts}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let workout of workouts">
+                <tr [ngClass]="completedWorkoutArray.includes(workout.id) ? 'table-success' : 'table-light'" *ngIf="!currentGoal.completedWorkouts.includes(workout.id)">
+                    <td>{{workout.name}}</td>
+                    <td>
+                        <input type="checkbox" [checked]="workout.completed" [(ngModel)]="workout.completed"
+                            (ngModelChange)="updateTotalComplete(workout.id, workout)" />
+                    </td>
+                </tr>
+                <tr [ngClass]="completedWorkoutArray.includes(workout.id) ? 'table-success' : 'table-light'" *ngIf="currentGoal.completedWorkouts.includes(workout.id)">
+                    <td>{{workout.name}}</td>
+                    <td>
+                        <input type="checkbox" [checked]="isChecked()" [(ngModel)]="status"
+                            (ngModelChange)="updateTotalComplete(workout.id, workout)" />
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

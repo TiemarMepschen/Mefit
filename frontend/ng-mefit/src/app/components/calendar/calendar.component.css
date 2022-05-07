@@ -1,0 +1,14 @@
+.cal-cell-row {
+	height: 100%;
+}
+.cal-events .ng-star-inserted { 
+	margin-top: -65px;
+}
+.cal-month-view .cal-day-cell {
+	 height: 80px;
+	 min-height: 0px;
+}
+
+.cal-day-badge {
+	visibility: hidden;
+}

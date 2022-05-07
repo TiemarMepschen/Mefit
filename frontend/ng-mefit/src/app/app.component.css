@@ -1,0 +1,10 @@
+.login-pf body {
+    background: #39a5dc;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    background-color: #1F2833;
+    color: white;
+}

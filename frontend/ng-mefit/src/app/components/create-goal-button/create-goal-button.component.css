@@ -1,0 +1,17 @@
+.modal-header {
+    color: black;
+}
+
+.modal-body {
+    color: black;
+}
+::ng-deep .p-datepicker {
+    background-color: rgb(255, 255, 255);
+}
+::ng-deep .p-datepicker table td > span {
+    background-color: orange;
+  }
+  
+  ::ng-deep .p-datepicker table td.p-datepicker-today > span {
+    background-color: burlywood;
+  }

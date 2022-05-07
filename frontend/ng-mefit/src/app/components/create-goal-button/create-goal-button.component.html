@@ -1,0 +1,23 @@
+<button class="btn btn-info ms-3" (click)="handleModalButton(content)">Select Program</button>
+
+<ng-template #content let-modal>
+    <div>
+        <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">New goal</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <h5 class="fw-normal">Selected program: <span class="fw-bolder">{{program.name}}</span></h5>
+            </div>
+            <div>
+                <label class="me-2">Select goal end date: </label>
+                <p-calendar [(ngModel)]="selectedDate" [minDate]="mininumDate"></p-calendar>
+            </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Cancel click')">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="handleNewGoal(selectedDate, program.id);modal.dismiss('Close click')">Create goal</button>
+        </div>
+    </div>
+</ng-template>

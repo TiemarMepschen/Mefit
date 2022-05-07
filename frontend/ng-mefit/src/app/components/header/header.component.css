@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #0B0C10;
+    color: white;
+    height: 75px;
+}
+
+.nav-link:hover {background-color: #7e7e7e;}
+
+ul.navbar-nav li a:link {
+    line-height: 58px; 
+}
+
+.active {
+    background-color: #525252;
+}

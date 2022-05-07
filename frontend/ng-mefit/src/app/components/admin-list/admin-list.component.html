@@ -1,0 +1,15 @@
+<h2 class="fw-light">User ID: {{user?.id}}</h2>
+<h2 class="fw-light">First name: {{user?.firstName}}</h2>
+<h2 class="fw-light">Last name: {{user?.lastName}}</h2>
+<div id="removeUser">
+    <div class="container-fluid mt-1">
+        <div class="row">
+            <div class="ml-4 mt-1" style="color: white;">
+                <div>
+                        <button class="btn btn-info float-end" (click)="handleAdminRejectButton(user!.id)">Reject Admin Request</button>
+                        <button class="btn btn-info float-end mx-2" (click)="handleAdminAcceptButton(user!.id)">Accept Admin Request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

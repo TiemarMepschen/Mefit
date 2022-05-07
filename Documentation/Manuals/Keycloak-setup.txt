@@ -1,0 +1,31 @@
+# Keycloak setup
+
+## Start up keycloak and create a realm
+Go to https://app-key-cloak.herokuapp.com/auth/.
+GO to the administration console and log in with:
+Username: admin
+Password: admin
+Hover over master (top-left of page) and select “add realm”
+Enter name: mefit
+Click create
+
+## Create a client
+Go to clients and click create (right side of page)
+Client-id: NgMefit
+Root url: http://localhost:4200
+Click save
+
+## Add user registration
+Go to Realm settings and select the login tab.
+Set user registration to 'ON'
+click save
+
+## Add user
+Got to users
+Click add user
+Enter a name
+Click save
+Go to credentials
+Enter a password
+Change temporary to 'OFF'
+Click save

@@ -1,0 +1,25 @@
+.table-wrapper {
+    overflow: auto;
+    border-radius: 5px;
+    border: solid;
+    border-color: white;
+    background-color: #f1f4f8;
+}
+
+.table-header {
+    position: sticky;
+    top: 0;
+}
+
+div::-webkit-scrollbar {
+    height: 7px;
+}
+
+div::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: #0B0C10;
+    border-radius: 10px;
+}

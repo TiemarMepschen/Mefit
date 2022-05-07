@@ -1,0 +1,17 @@
+<div>
+    <div class="container mt-1">
+        <div class="row">
+            <div class="ml-4 mt-4" style="color: white;">
+                <div class="p-4">
+                    <h2 class="fw-light" *ngIf="users.length == 0">No admin requests</h2>
+                </div>
+                <div class="border border-5 border-dark rounded pt-4" *ngIf="users.length !== 0" style="background-color: #2c3948;">
+                    <ul>
+                        <app-admin-list *ngFor="let user of users"
+                        [user]="user"></app-admin-list>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
